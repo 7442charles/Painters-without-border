@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painters Without Borders - Projects</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <meta name="description" content="Explore projects by Painters Without Borders transforming communities through art.">
+  <meta name="keywords" content="painting, projects, murals, art, Kenya, community, vocational training">
+  <meta name="author" content="Painters Without Borders">
+
+  <!-- Theme Color -->
+  <!-- For Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#f8f2d9">
+
+  <!-- For Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#f8f2d9">
+
+  <!-- For iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#f8f2d9">
+
+
+  <meta http-equiv="content-language" content="en">
+
+  <style>
+    html{ scroll-behavior: smooth;}
+
+        @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 30s linear infinite;
+    }
+
+    /* Pause on hover */
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.05); }
+      50% { transform: scale(0.95); }
+      75% { transform: scale(1.08); }
+    }
+    .animate-heartbeat {
+      animation: heartbeat 1.5s ease-in-out infinite;
+    }
+  </style>
+
+</head>
+<body class="bg-[#f8f2d9] flex flex-col min-h-screen">
+
+<!-- Navbar -->
+<header class="bg-[#f8f2d9] text-[#17a0dd] shadow-md relative">
+  <!-- Adjusted padding for tablet screens -->
+  <div class="container mx-auto flex justify-between items-center py-2 sm:py-3 md:py-4 px-4 md:px-6">
+    
+    <!-- Logo + Extra Image -->
+    <div class="flex items-center space-x-2">
+      <a href="index.html" class="flex items-center">
+        <img 
+          src="Assets/images/main_image_logo-nobg.png" 
+          alt="Painters Without Borders Logo" 
+          class="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 transition-transform duration-300 hover:scale-105">
+      </a>
+
+      <!-- Extra Image (Desktop) -->
+      <img 
+        src="Assets/images/painters-nobg.png" 
+        alt="Desktop Art Brush Icon" 
+        class="hidden lg:block w-24 h-auto object-contain rounded-lg">
+
+      <!-- Extra Image (Tablet) -->
+      <img 
+        src="Assets/images/painters-nobg.png" 
+        alt="Tablet Art Brush Icon" 
+        class="hidden sm:block lg:hidden w-20 h-16 object-contain rounded-lg">
+
+      <!-- Extra Image (Mobile) -->
+      <img 
+        src="Assets/images/mobilePainters-nobg.png" 
+        alt="Mobile Art Brush Icon" 
+        class="block sm:hidden w-20 h-14 object-contain rounded-lg">
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav 
+      class="hidden md:flex flex-1 justify-center space-x-6 text-lg font-medium uppercase"
+      style="font-family: 'Permanent Marker';">
+      <a href="index.html" class="hover:text-[#E0B34E]">Home</a>
+      <a href="#projects" class="hover:text-[#E0B34E]">Projects</a>
+      <a href="gallery.html" class="hover:text-[#E0B34E]">Gallery</a>
+      <a href="index.html#sponsors" class="hover:text-[#E0B34E]">Sponsors</a>
+      <a href="#contact" class="hover:text-[#E0B34E]">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle" class="md:hidden focus:outline-none">
+      <img 
+        src="Assets/images/menu-nobg.png" 
+        alt="Open Menu" 
+        class="w-10 h-10">
+    </button>
+  </div>
+
+  <!-- Drawer (Mobile Menu) -->
+  <div id="mobile-drawer" class="fixed top-0 left-0 w-64 h-full bg-[#f8f2d9] text-[#17a0dd] shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50 flex flex-col justify-between">
+    
+    <!-- Header -->
+    <div>
+      <div class="flex justify-between items-center p-4 border-b border-[#E0B34E]">
+        <img src="Assets/images/main_image_logo-nobg.png" alt="Logo" class="w-22 h-22">
+        <button id="drawer-close" class="focus:outline-none">
+          <img 
+            src="Assets/images/close-Nobg.png" 
+            alt="Close Menu" 
+            class="w-8 h-8">
+        </button>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="flex flex-col space-y-4 p-6 text-lg font-medium uppercase" style="font-family: 'Permanent Marker';">
+        <a href="index.html" class="hover:text-[#E0B34E]">Home</a>
+        <a href="#projects" class="hover:text-[#E0B34E]">Projects</a>
+        <a href="gallery.html" class="hover:text-[#E0B34E]">Gallery</a>
+        <a href="index.html#sponsors" class="hover:text-[#E0B34E]">Sponsors</a>
+        <a href="index.html#contact" class="hover:text-[#E0B34E]">Contact</a>
+      </nav>
+
+      <!-- Drawer Image -->
+      <div class="px-6 py-4 pb-4">
+        <img 
+          src="Assets/images/painters-nobg.png" 
+          alt="Drawer Illustration" 
+          class="rounded-2xl w-full h-auto object-cover animate-heartbeat">
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm py-3 border-t border-[#E0B34E]">
+      <a 
+        href="https://quickofficepointe.co.ke" 
+        target="_blank" 
+        class="flex justify-center items-center space-x-1">
+        <span class="text-[#17a0dd] font-bold">Developed by</span>
+        <span class="text-[#FF0000] font-bold">Quick</span>
+        <span class="text-[#E0B34E] font-bold">Office</span>
+        <span class="text-[#006633] font-bold">Pointe</span>
+      </a>
+    </footer>
+  </div>
+
+  <!-- Overlay -->
+  <div id="drawer-overlay" class="hidden fixed inset-0 bg-black/50 z-40"></div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative bg-[#f8f2d9] py-20 px-6 text-center">
+  <h1 class="text-5xl sm:text-6xl font-bold text-[#17a0dd]" style="font-family: 'Permanent Marker', cursive;">
+    Our Projects
+  </h1>
+  <p class="mt-4 max-w-2xl mx-auto text-gray-700 text-lg sm:text-xl">
+    Explore our painting initiatives and vocational training programs shaping the future of young artists in Kenya.
+  </p>
+</section>
+
+<!-- Projects Section -->
+<section class="py-12 bg-[#f8f2d9]">
+  <div class="container mx-auto px-6 lg:px-12 space-y-16" id="projects">
+
+    <!-- Project 1: Image Left, Text Right -->
+    <div onclick="openModal('project1')" class="cursor-pointer grid md:grid-cols-2 gap-10 items-center 
+                border-l-2 border-l-[#17a0dd] 
+                border-t-2 border-t-[#17a0dd] 
+                border-r-2 border-r-[#E0B34E] 
+                border-b-2 border-b-[#E0B34E] 
+                p-6 rounded-3xl hover:shadow-2xl transition">
+      <img src="Assets/images/gallery1.jpg" alt="Painting for Schools" class="w-full h-80 object-cover rounded-2xl shadow-lg">
+      <div>
+        <h3 class="text-3xl font-bold text-[#17a0dd] mb-4" style="font-family: 'Permanent Marker', cursive;">Painting for Schools</h3>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Transforming local schools in Nairobi with murals that inspire students and teachers alike. Young trainees learn practical painting skills while contributing to community development.
+        </p>
+        <div class="mt-6 bg-[#E0B34E] text-white font-bold px-6 py-3 rounded-full text-center">
+          Read More
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2: Image Right, Text Left -->
+    <div onclick="openModal('project2')" class="cursor-pointer grid md:grid-cols-2 gap-10 items-center md:flex-row-reverse
+                border-l-2 border-l-[#E0B34E] 
+                border-t-2 border-t-[#E0B34E] 
+                border-r-2 border-r-[#17a0dd] 
+                border-b-2 border-b-[#17a0dd] 
+                p-6 rounded-3xl hover:shadow-2xl transition">
+      <img src="Assets/images/gallery2.jpg" alt="Community Murals" class="w-full h-80 object-cover rounded-2xl shadow-lg">
+      <div>
+        <h3 class="text-3xl font-bold text-[#17a0dd] mb-4" style="font-family: 'Permanent Marker', cursive;">Community Murals</h3>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Beautifying neighborhoods and fostering community pride through collaborative mural projects. Each project encourages creativity and social engagement among youth.
+        </p>
+        <div class="mt-6 bg-[#E0B34E] text-white font-bold px-6 py-3 rounded-full text-center">
+          Read More
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3: Image Left, Text Right -->
+    <div onclick="openModal('project3')" class="cursor-pointer grid md:grid-cols-2 gap-10 items-center 
+                border-l-2 border-l-[#17a0dd] 
+                border-t-2 border-t-[#17a0dd] 
+                border-r-2 border-r-[#E0B34E] 
+                border-b-2 border-b-[#E0B34E] 
+                p-6 rounded-3xl hover:shadow-2xl transition">
+      <img src="Assets/images/gallery3.jpg" alt="Vocational Training" class="w-full h-80 object-cover rounded-2xl shadow-lg">
+      <div>
+        <h3 class="text-3xl font-bold text-[#17a0dd] mb-4" style="font-family: 'Permanent Marker', cursive;">Vocational Training</h3>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Hands-on painting training for young adults (18-27 years old) teaching techniques, business skills, and professional development to enable self-employment and career growth in the painting trade.
+        </p>
+        <div class="mt-6 bg-[#E0B34E] text-white font-bold px-6 py-3 rounded-full text-center">
+          Read More
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="projectModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden flex justify-center items-center z-50 overflow-auto">
+  <div class="bg-white rounded-3xl max-w-4xl w-full mx-4 lg:mx-0 p-8 relative shadow-2xl transform transition-transform duration-300 scale-90">
+    
+    <!-- Close Button with Image -->
+    <button onclick="closeModal()" class="absolute top-4 right-4 w-10 h-10">
+      <img src="Assets/images/close-Nobg.png" alt="Close" class="w-8 h-8 object-contain hover:opacity-80 transition-opacity">
+    </button>
+    
+    <img id="modalImage" src="" alt="Project" class="w-full h-64 object-cover rounded-xl mb-6">
+    <h3 id="modalTitle" class="text-3xl font-bold text-[#17a0dd] mb-4" style="font-family: 'Permanent Marker', cursive;"></h3>
+    <p id="modalDescription" class="text-gray-700 text-lg leading-relaxed"></p>
+  </div>
+</div>
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-[#f8f2d9] relative overflow-hidden">
+  <!-- Decorative Brush Stroke Background -->
+  <div class="absolute inset-0 opacity-10 bg-[url('Assets/images/brush-stroke-texture.png')] bg-cover bg-center"></div>
+
+  <div class="relative container mx-auto px-6 lg:px-12">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl sm:text-5xl font-bold text-[#17a0dd]" style="font-family: 'Permanent Marker', cursive;">
+        Let’s Paint the Future Together
+      </h2>
+      <p class="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
+        Whether you want to support the training, collaborate, or learn more — we’d love to hear from you!  
+        Fill out the form below and let’s make a colorful impact.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <!-- Contact Form -->
+      <form action="#" method="POST" class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-[#E0B34E]">
+        <div class="mb-6">
+          <label class="block text-gray-700 font-semibold mb-2">Full Name</label>
+          <input type="text" name="name" required class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#17a0dd] outline-none">
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-gray-700 font-semibold mb-2">Email Address</label>
+          <input type="email" name="email" required class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#17a0dd] outline-none">
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-gray-700 font-semibold mb-2">Message</label>
+          <textarea name="message" rows="5" required class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#17a0dd] outline-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-[#17a0dd] text-white font-semibold py-3 rounded-lg hover:bg-[#138ac1] transition duration-300 shadow-md">
+          🎨 Send Message
+        </button>
+      </form>
+
+      <!-- Illustration / Contact Info -->
+      <div class="flex justify-center lg:justify-end">
+        <img src="Assets/images/contact_info.png" 
+            alt="Contact Art" 
+            class="w-full max-w-md rounded-2xl shadow-lg">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#f8f2d9] border-t-4 border-[#E0B34E] py-6">
+  <div class="container mx-auto px-6 text-center text-sm text-gray-700 space-y-2">
+    
+    <!-- Legal Links Row -->
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="privacy.html" class="text-[#17a0dd] hover:underline">Privacy Policy</a>
+      <a href="terms.html" class="text-[#17a0dd] hover:underline">Terms of Service</a>
+      <a href="cookies.html" class="text-[#17a0dd] hover:underline">Cookie Policy</a>
+    </div>
+
+    <!-- Rights Reserved Row -->
+    <div>
+      © <span id="year"></span> Painters Without Borders. All rights reserved.
+    </div>
+
+    <!-- Credits Row -->
+    <div>
+      Developed by 
+      <a href="https://quickofficepointe.co.ke" target="_blank" class="text-[#17a0dd] font-bold hover:underline">
+        Quick Office Pointe
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const projects = {
+    project1: {
+      image: 'Assets/images/gallery1.jpg',
+      title: 'Painting for Schools',
+      description: 'Transforming local schools in Nairobi with murals that inspire students and teachers alike. Young trainees learn practical painting skills while contributing to community development.'
+    },
+    project2: {
+      image: 'Assets/images/gallery2.jpg',
+      title: 'Community Murals',
+      description: 'Beautifying neighborhoods and fostering community pride through collaborative mural projects. Each project encourages creativity and social engagement among youth.'
+    },
+    project3: {
+      image: 'Assets/images/gallery3.jpg',
+      title: 'Vocational Training',
+      description: 'Hands-on painting training for young adults (18-27 years old) teaching techniques, business skills, and professional development to enable self-employment and career growth in the painting trade.'
+    }
+  };
+
+  function openModal(projectKey) {
+    const project = projects[projectKey];
+    document.getElementById('modalImage').src = project.image;
+    document.getElementById('modalTitle').innerText = project.title;
+    document.getElementById('modalDescription').innerText = project.description;
+    document.getElementById('projectModal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('projectModal').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+
+  document.getElementById('projectModal').addEventListener('click', function(e){
+    if(e.target === this) closeModal();
+  });
+</script>
+
+<script src="Assets/js/drawer.js"></script>
+</body>
+</html>

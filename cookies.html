@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Policy - Painters Without Borders</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <meta name="description" content="Cookie Policy for Painters Without Borders website, explaining how cookies are used to improve user experience.">
+  <meta name="keywords" content="painting, projects, murals, art, Kenya, community, vocational training, cookies, privacy">
+  <meta name="author" content="Painters Without Borders">
+
+  <!-- Theme Color -->
+  <!-- For Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#f8f2d9">
+
+  <!-- For Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#f8f2d9">
+
+  <!-- For iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#f8f2d9">
+
+
+  <meta http-equiv="content-language" content="en">
+
+    <style>
+    html{ scroll-behavior: smooth;}
+
+        @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 30s linear infinite;
+    }
+
+    /* Pause on hover */
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.05); }
+      50% { transform: scale(0.95); }
+      75% { transform: scale(1.08); }
+    }
+    .animate-heartbeat {
+      animation: heartbeat 1.5s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#f8f2d9] text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+<header class="bg-[#f8f2d9] text-[#17a0dd] shadow-md relative">
+  <!-- Adjusted padding for tablet screens -->
+  <div class="container mx-auto flex justify-between items-center py-2 sm:py-3 md:py-4 px-4 md:px-6">
+    
+    <!-- Logo + Extra Image -->
+    <div class="flex items-center space-x-2">
+      <a href="index.html" class="flex items-center">
+        <img 
+          src="Assets/images/main_image_logo-nobg.png" 
+          alt="Painters Without Borders Logo" 
+          class="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 transition-transform duration-300 hover:scale-105">
+      </a>
+
+      <!-- Extra Image (Desktop) -->
+      <img 
+        src="Assets/images/painters-nobg.png" 
+        alt="Desktop Art Brush Icon" 
+        class="hidden lg:block w-24 h-auto object-contain rounded-lg">
+
+      <!-- Extra Image (Tablet) -->
+      <img 
+        src="Assets/images/painters-nobg.png" 
+        alt="Tablet Art Brush Icon" 
+        class="hidden sm:block lg:hidden w-20 h-16 object-contain rounded-lg">
+
+      <!-- Extra Image (Mobile) -->
+      <img 
+        src="Assets/images/mobilePainters-nobg.png" 
+        alt="Mobile Art Brush Icon" 
+        class="block sm:hidden w-20 h-14 object-contain rounded-lg">
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav 
+      class="hidden md:flex flex-1 justify-center space-x-6 text-lg font-medium uppercase"
+      style="font-family: 'Permanent Marker';">
+      <a href="index.html" class="hover:text-[#E0B34E]">Home</a>
+      <a href="projects.html#projects" class="hover:text-[#E0B34E]">Projects</a>
+      <a href="gallery.html" class="hover:text-[#E0B34E]">Gallery</a>
+      <a href="index.html#sponsors" class="hover:text-[#E0B34E]">Sponsors</a>
+      <a href="index.html#contact" class="hover:text-[#E0B34E]">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle" class="md:hidden focus:outline-none">
+      <img 
+        src="Assets/images/menu-nobg.png" 
+        alt="Open Menu" 
+        class="w-10 h-10">
+    </button>
+  </div>
+
+  <!-- Drawer (Mobile Menu) -->
+  <div id="mobile-drawer" class="fixed top-0 left-0 w-64 h-full bg-[#f8f2d9] text-[#17a0dd] shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50 flex flex-col justify-between">
+    
+    <!-- Header -->
+    <div>
+      <div class="flex justify-between items-center p-4 border-b border-[#E0B34E]">
+        <img src="Assets/images/main_image_logo-nobg.png" alt="Logo" class="w-22 h-22">
+        <button id="drawer-close" class="focus:outline-none">
+          <img 
+            src="Assets/images/close-Nobg.png" 
+            alt="Close Menu" 
+            class="w-8 h-8">
+        </button>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="flex flex-col space-y-4 p-6 text-lg font-medium uppercase" style="font-family: 'Permanent Marker';">
+        <a href="index.html" class="hover:text-[#E0B34E]">Home</a>
+        <a href="projects.html#projects" class="hover:text-[#E0B34E]">Projects</a>
+        <a href="gallery.html" class="hover:text-[#E0B34E]">Gallery</a>
+        <a href="index.html#sponsors" class="hover:text-[#E0B34E]">Sponsors</a>
+        <a href="index.html#contact" class="hover:text-[#E0B34E]">Contact</a>
+      </nav>
+
+      <!-- Drawer Image -->
+      <div class="px-6 py-4 pb-4">
+        <img 
+          src="Assets/images/painters-nobg.png" 
+          alt="Drawer Illustration" 
+          class="rounded-2xl w-full h-auto object-cover animate-heartbeat">
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm py-3 border-t border-[#E0B34E]">
+      <a 
+        href="https://quickofficepointe.co.ke" 
+        target="_blank" 
+        class="flex justify-center items-center space-x-1">
+        <span class="text-[#17a0dd] font-bold">Developed by</span>
+        <span class="text-[#FF0000] font-bold">Quick</span>
+        <span class="text-[#E0B34E] font-bold">Office</span>
+        <span class="text-[#006633] font-bold">Pointe</span>
+      </a>
+    </footer>
+  </div>
+
+  <!-- Overlay -->
+  <div id="drawer-overlay" class="hidden fixed inset-0 bg-black/50 z-40"></div>
+</header>
+
+  <!-- Hero Section -->
+  <section class="py-16 text-center bg-[#f8f2d9] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('Assets/images/brush-stroke-texture.png')] bg-cover bg-center"></div>
+
+    <h1 class="relative text-5xl font-bold text-[#17a0dd]" style="font-family: 'Permanent Marker', cursive;">Cookie Policy</h1>
+    <p class="relative mt-4 max-w-2xl mx-auto text-gray-700 text-lg sm:text-xl">
+      Learn how we use cookies and similar technologies on our website.
+    </p>
+  </section>
+
+  <!-- Cookies Content -->
+  <section class="container mx-auto px-6 lg:px-12 pb-16 space-y-8 text-gray-700">
+    <h2 class="text-2xl font-bold text-[#17a0dd]" style="font-family: 'Permanent Marker', cursive;">What Are Cookies?</h2>
+    <p>Cookies are small text files that are placed on your device by websites you visit. They help enhance your browsing experience by remembering your preferences and settings.</p>
+
+    <h2 class="text-2xl font-bold text-[#17a0dd]" style="font-family: 'Permanent Marker', cursive;">How We Use Cookies</h2>
+    <p>We use cookies to:</p>
+    <ul class="list-disc ml-6 space-y-2">
+      <li>Understand how visitors interact with our website</li>
+      <li>Improve website functionality and performance</li>
+      <li>Remember your preferences and settings</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-[#17a0dd]" style="font-family: 'Permanent Marker', cursive;">Types of Cookies We Use</h2>
+    <ul class="list-disc ml-6 space-y-2">
+      <li><strong>Essential Cookies:</strong> Necessary for the website to function properly.</li>
+      <li><strong>Performance Cookies:</strong> Collect information about how you use the website to improve user experience.</li>
+      <li><strong>Functional Cookies:</strong> Remember choices you make to provide a more personalized experience.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-[#17a0dd]" style="font-family: 'Permanent Marker', cursive;">Managing Cookies</h2>
+    <p>You can manage or disable cookies through your browser settings. Note that disabling certain cookies may affect the functionality of the website.</p>
+
+    <h2 class="text-2xl font-bold text-[#17a0dd]" style="font-family: 'Permanent Marker', cursive;">Contact Us</h2>
+    <p>If you have any questions about our use of cookies, please contact us at <a href="mailto:info@painterswithoutborders.org" class="text-[#17a0dd] hover:underline">info@painterswithoutborders.org</a>.</p>
+  </section>
+
+<!-- Footer -->
+<footer class="bg-[#f8f2d9] border-t-4 border-[#E0B34E] py-6">
+  <div class="container mx-auto px-6 text-center text-sm text-gray-700 space-y-2">
+    
+    <!-- Legal Links Row -->
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="privacy.html" class="text-[#17a0dd] hover:underline">Privacy Policy</a>
+      <a href="terms.html" class="text-[#17a0dd] hover:underline">Terms of Service</a>
+      <a href="cookies.html" class="text-[#17a0dd] hover:underline">Cookie Policy</a>
+    </div>
+
+    <!-- Rights Reserved Row -->
+    <div>
+      © <span id="year"></span> Painters Without Borders. All rights reserved.
+    </div>
+
+    <!-- Credits Row -->
+    <div>
+      Developed by 
+      <a href="https://quickofficepointe.co.ke" target="_blank" class="text-[#17a0dd] font-bold hover:underline">
+        Quick Office Pointe
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script src="Assets/js/drawer.js"></script>
+
+</body>
+</html>
